@@ -1,12 +1,13 @@
 import { useState } from "react";
 import axios from "axios";
 
-const Form = () => {
+const Form = (props) => {
   const [text, setText] = useState('')
   const handleSubmit = async (e) => {
     e.preventDefault()
     const resp = await axios.get(`https://api.github.com/users/${text}`);
-    console.log(resp)
+    // console.log(resp.data)
+    props.onSubmit(resp.data)
     
   }
   return (

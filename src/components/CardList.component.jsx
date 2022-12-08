@@ -1,10 +1,13 @@
 import Card from "./Card.component";
 
-const CardList = ({users}) => {
+const CardList = (props) => {
+    console.log(props.user.user)
+    
+    
     
   return (
       <div>
-           {users.map((user)=><Card {...user}></Card>)}
+           {props.user.user.map(user => <Card key={user.id} {...user}/>)}
       
         </div>
   );
