@@ -1,11 +1,14 @@
 import { useState } from "react";
-import Card from "./components/Card.component";
-
+import CardList from "./components/CardList.component";
+import Form from "./components/Form.component";
+import testData from "./data/user.data";
 function App() {
+  const [user, setUserState] = useState(testData)
+ 
   return (
     <>
-      <h1>Hello World</h1>
-      <Card/>
+      <Form/>
+      <CardList users={user}/>
     </>
   );
 }

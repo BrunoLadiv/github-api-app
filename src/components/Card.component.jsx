@@ -1,12 +1,13 @@
-import { Profiler } from "react"
 
-const Card = (props) => {
+
+
+const Card = ({name,avatar_url,company}) => {
 
     return ( <div className="github-profile">
-    <img src="https://placehold.it/75" />
+    <img src={avatar_url} />
   <div className="info">
-    <div className="name">Name here...</div>
-    <div className="company">Company here...</div>
+    <div className="name">{name}</div>
+    <div className="company">{company}</div>
   </div>
   </div> )
 }
